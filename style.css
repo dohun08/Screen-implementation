@@ -45,7 +45,7 @@ main{
 .gg2{padding: 10px 50px; font-size: 20px;cursor: pointer;}
 .gg3{padding: 10px 50px; font-size: 20px;cursor: pointer;}
 .blbl{
-    background-color: red;
+    background: repeating-linear-gradient(140deg, #ffffff, #ffffff 2px, #dbdada 0, #dbdada 4px);
     width: 25%;
     margin-top: 50px;
     background-size: 30px 100%;
@@ -115,7 +115,7 @@ main{
 }
 .blbl2{
     background-color: white;
-    padding: 5px;
+    padding: 5px 10px;
     height: 150px;
 }
 .blbl2 h3{font-weight: 600;}
@@ -476,9 +476,10 @@ hr{
 footer{
     margin-left: 100px;
     margin-right: 100px;
-    width: 100%;
+    width: 87%;
     position: absolute;
     top: 1550px;
+    height: 180px;
 }
 .person{
     color: black;
@@ -487,7 +488,7 @@ footer{
 }
 .warning{
     margin: 10px 0px;
-    width: 22%;
+    width: 25%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -496,4 +497,21 @@ footer{
     color: black;
     font-size: 15px;
     font-weight: 400;
+}
+.total{
+    width: 253px;
+    height: 35px;
+    border-radius: 80px;
+    background: #8ABFFF;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-around;
+    font-weight: 500;
+    padding: 0px 10px;
+    position: absolute;
+    top: 100px;
+    right: 0px;
 }

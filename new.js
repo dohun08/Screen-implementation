@@ -196,7 +196,7 @@ function gg3(){
     document.querySelector(".gg1").style.color = "rgb(100, 100, 100)";
     document.querySelector(".gg1").style.border = "1px solid rgb(200, 200, 200)";
 
-    document.querySelector(".blbl2").innerHTML = "<h3>2024년 7-8월 보건소식지</h3>.<span>2024.07.05";
+    document.querySelector(".blbl2").innerHTML = "<h3>2024년 7-8월 보건소식지</h3><span>2024.07.05";
     document.querySelector("#style1").innerHTML ="2024학년도 자녀사랑 뉴스레터 7월호    ";
     document.querySelector("#style2").innerHTML ="2024년 백일해 및 마이코플라즈마 폐렴균 감염증 등 호흡기 감염병 예방 내\    ";
     document.querySelector("#style3").innerHTML ="7월 영양소식 안내    ";
@@ -229,4 +229,3 @@ function minus(){
     else
         month.textContent = current -1 + "월";
 }
-
