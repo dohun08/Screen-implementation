@@ -400,7 +400,7 @@ header div a:hover{text-decoration-line: underline;color: rgb(0, 110, 255);}
 }
 .work{
     color: rgb(255, 255, 255);
-    font-weight: bold;
+    font-weight: 550;
 }
 .work li{float: left; margin-right: 200px;cursor: pointer;}
 .work li:hover{text-decoration-line: underline;}
@@ -515,3 +515,4 @@ footer{
     top: 100px;
     right: 0px;
 }
+#num31{display: none;}
