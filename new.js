@@ -121,35 +121,6 @@ document.querySelector("#stop2").addEventListener("click", function(){
     document.querySelector("#stop").style.display = "block"
     document.querySelector("#stop2").style.display = "none"
 });
-function stop2(){
-    showSlides();
-}
-var slideIndex = 0;
-var z=0;
-function showSlides(){
-    var i;
-    var slides = document.getElementsByClassName("slides");
-    
-    for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-    }
-    slideIndex++;
-    if (slideIndex > slides.length) {
-        slideIndex = 1
-    }
-    document.querySelector("#stop").addEventListener("click", function(){
-        document.querySelector("#stop").style.display = "none"
-        document.querySelector("#stop2").style.display = "block"
-        z=1;
-    });
-    if(z){
-        slides[slideIndex-1].style.display = "block"
-        var z=0;
-        return 0;
-    }
-    slides[slideIndex - 1].style.display = "block";
-    setTimeout(showSlides, 2000); // 2초마다 이미지가 체인지됩니다
-}
 
 function gg1(){
     document.querySelector(".gg1").style.background = "rgb(0,114,188)";
@@ -202,6 +173,44 @@ function gg3(){
     document.querySelector("#style3").innerHTML ="7월 영양소식 안내    ";
     document.querySelector("#style4").innerHTML ="2024학년도 직업계고 내일행복드림 바우처 지원사업 안내    ";
 }
+
+
+
+window.onload = function() {
+    const kindWrap =  document.querySelector('.kind_wrap');
+    const slider = kindWrap.querySelector('.slider');
+    const slideLis = slider.querySelectorAll('li')
+    const moveButton = kindWrap.querySelector('.arrow');
+  
+    /* ul 넓이 계산해 주기 */
+    const liWidth = slideLis[0].clientWidth;
+    const sliderWidth = liWidth * slideLis.length;
+    slider.style.width = `${sliderWidth}px` ;
+  
+    /* 리스너 설치하기 */
+    let currentIdx = 0; // 슬라이드 현재 번호
+    let translate = 0; // 슬라이드 위치 값
+    moveButton.addEventListener('click', moveSlide);
+    function moveSlide(event) {
+      event.preventDefault();
+      if (event.target.className === 'next') {
+        if (currentIdx !== slideLis.length -1) {
+          translate -= liWidth;
+          slider.style.transform = `translateX(${translate}px)`;
+          currentIdx += 1;
+        }
+      } 
+      else if (event.target.className === 'prev') {
+        if (currentIdx !== 0) {
+            translate += liWidth;
+            slider.style.transform = `translateX(${translate}px)`;
+            currentIdx -= 1;
+        }
+      }
+    }
+  
+}
+
 
 
 
@@ -584,7 +593,4 @@ function minus(){
             }
         }
     }
-        
-
 }
-
