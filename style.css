@@ -41,7 +41,7 @@ main{
     border: 1px solid rgb(200, 200, 200);
 }
 .plus{padding: 10px 20px 10px 1000%; font-size: 20px; border: 1px solid rgb(200, 200, 200);color: black;}
-.gg1{padding: 10px 50px; font-size: 20px;cursor: pointer;}
+.gg1{padding: 10px 50px; font-size: 20px;cursor: pointer; background: rgb(0,114,188); border:0.9px solid rgb(0,114,200);}
 .gg2{padding: 10px 50px; font-size: 20px;cursor: pointer;}
 .gg3{padding: 10px 50px; font-size: 20px;cursor: pointer;}
 .blbl{
@@ -194,6 +194,7 @@ nav{
 }
 nav a span{padding: 20px 10px;}
 nav a {color: black; text-decoration-line: none;}
+
 #nav{position: relative;}
 header div{
     border: 2px solid rgb(0, 8, 162);
@@ -212,54 +213,63 @@ header div a:hover{text-decoration-line: underline;color: rgb(0, 110, 255);}
     top: 135px;
     left: -40px;
     display: none;
+    z-index: 1;
 }
 #bar2{
     position: absolute;
     top: 135px;
     left: 45px;
     display: none;
+    z-index: 1;
 }
 #bar3{
     position: absolute;
     top: 135px;
     left: 140px;
     display: none;
+    z-index: 1;
 }
 #bar4{
     position: absolute;
     top: 135px;
     left: 230px;
     display: none;
+    z-index: 1;
 }
 #bar5{
     position: absolute;
     top: 135px;
     left: 350px;
     display: none;
+    z-index: 1;
 }
 #bar6{
     position: absolute;
     top: 135px;
     left: 460px;
     display: none;
+    z-index: 1;
 }
 #bar7{
     position: absolute;
     top: 135px;
     left: 550px;
     display: none;
+    z-index: 1;
 }
 #bar8{
     position: absolute;
     top: 135px;
     left: 650px;
     display: none;
+    z-index: 1;
 }
 #bar9{
     position: absolute;
     top: 135px;
     left: 750px;
     display: none;
+    z-index: 1;
 }
   li {
     list-style: none;
@@ -297,7 +307,7 @@ header div a:hover{text-decoration-line: underline;color: rgb(0, 110, 255);}
     border-radius: 100px;
     border: 1px solid #000;
 }
-#stop{display: none;}
+#stop2{display: none;}
 #bg{
     position: absolute;
     top: 100%;
@@ -456,14 +466,11 @@ header div a:hover{text-decoration-line: underline;color: rgb(0, 110, 255);}
     top: 940px;
     border-top: 1px solid black;
     border-bottom: 1px solid black;
-    display: flex;
-    flex-direction: row;
-    padding: 20px 0px;
     width: 115%;
     left: -8%;
+    display: flex;
+    align-items: center;
 }
-#banner :first-child{margin-left: 7%;}
-#banner article{margin-right: 20px;}
 .banner{
     position: relative;
 }
@@ -474,13 +481,16 @@ hr{
 #banner_list{
     width: 800px;
     display: flex;
-    flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-around;
-    margin-right: 10px;
+    height: 50px;
+    box-sizing: border-box;
+    overflow: hidden;
+    background-color: red;
 }
 #banners{
-    width: 150px;
-    border: 1px solid black;
+    margin-top: 5px;
+    width: 140px;
 }
 footer{
     margin-left: 100px;

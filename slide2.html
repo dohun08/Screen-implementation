@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .popup{
+      width: 1000px;
+      height: 200px;
+      border: 0.9px solid rgb(128, 128, 128);
+      border-radius: 5px;
+      position: relative;
+    }
+    .popup_bar{
+      background-color: #1550A0;
+      width: 990px;
+      height: 40px;
+      border-radius: 5px;
+      border: 1px solid black;
+      margin: 0px auto;
+      margin-top: 5px;
+      display: flex;
+      align-items: center;
+      position: relative;
+      cursor: move;
+    }
+    .popup_bar p{
+      position: absolute;
+      top: -5px;
+      left: 10px;
+      font-size: 16px;
+      font-weight: 700;
+      color: white;
+    }
+    .popup_bar button{
+      position: absolute;
+      top: 8px;
+      right: 10px;
+      cursor: pointer;
+    }
+    .nopopup{
+      width: 990px;
+      position: absolute;
+      z-index: 1;
+      background-color: #3B568F;
+      height: 25px;
+      color: white;
+      display: flex;
+      align-items: center;
+      margin: 0px auto;
+      justify-content: end;
+      cursor: pointer;
+    }
+    .popup_img{
+      margin-top: 5px;
+      display: flex;
+      justify-content: center;
+    }
+  </style>
+</head>
+<body>
+  <section class="popup">
+    <div class="popup_bar">
+      <p>2025년도 현장실습 확정 현수막</p>
+      <button style="width: 25px;"><img src="canc.png"style="width: 10px;"></button>
+    </div>
+    <div class="popup_img">
+      <img src="popup_img.jpg" width="990px">
+    </div>
+    <div class="nopopup" style="margin-left: 5px;">
+      <p style="margin-right: 20px;">하루동안 열지 않음[클릭]</p>
+    </div>
+    
+    </article>
+  </section>
+  <script>
+    let offsetX, offsetY;
+  let isDragging = false;
+  const popup = document.getElementsByClassName('popup');
+
+  popup.addEventListener('mousedown', (e) => {
+      isDragging = true;
+      offsetX = e.clientX - popup.getBoundingClientRect().left;
+      offsetY = e.clientY - popup.getBoundingClientRect().top;
+  });
+
+  document.addEventListener('mousemove', (e) => {
+      if (isDragging) {
+          popup.style.left = `${e.clientX - offsetX}px`;
+          popup.style.top = `${e.clientY - offsetY}px`;
+          popup.style.transform = 'none'; // 초기 transform을 무효화
+      }
+  });
+
+  document.addEventListener('mouseup', () => {
+      isDragging = false;
+  });
+
+  function showPopup() {
+      popup.style.display = 'block';
+  }
+
+  function closePopup() {
+      popup.style.display = 'none';
+  }
+
+  window.onload = function() {
+      setTimeout(showPopup, 1000);
+  };
+  </script>
+</body>
+</html>

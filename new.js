@@ -1,4 +1,3 @@
-var bar1 = document.querySelector(".bar1")
 
 document.querySelector(".bar1").addEventListener("mouseover", function(){document.querySelector("#bar1").style.display = "block"});
 document.querySelector(".bar1").addEventListener("mouseleave", function(){document.querySelector("#bar1").style.display = "none"});
@@ -45,82 +44,6 @@ document.querySelector(".bar9").addEventListener("mouseleave", function(){docume
 document.querySelector("#bar9").addEventListener("mouseover", function(){document.querySelector("#bar9").style.display = "block"});
 document.querySelector("#bar9").addEventListener("mouseleave", function(){document.querySelector("#bar9").style.display = "none"});
 
-document.querySelector("#ball").addEventListener("click", function(){
-    document.querySelector("#img1").style.display = "block"
-    document.querySelector("#img2").style.display = "none"
-    document.querySelector("#img3").style.display = "none"
-    document.querySelector("#img4").style.display = "none"
-    document.querySelector("#img5").style.display = "none"
-
-    document.querySelector("#ball").style.background = "#2C61AB"
-    document.querySelector("#ball2").style.background = "none"
-    document.querySelector("#ball3").style.background = "none"
-    document.querySelector("#ball4").style.background = "none"
-    document.querySelector("#ball5").style.background = "none"
-});
-
-document.querySelector("#ball2").addEventListener("click", function(){
-    document.querySelector("#img1").style.display = "none"
-    document.querySelector("#img2").style.display = "block"
-    document.querySelector("#img3").style.display = "none"
-    document.querySelector("#img4").style.display = "none"
-    document.querySelector("#img5").style.display = "none"
-
-    document.querySelector("#ball").style.background = "none"
-    document.querySelector("#ball2").style.background = "#2C61AB"
-    document.querySelector("#ball3").style.background = "none"
-    document.querySelector("#ball4").style.background = "none"
-    document.querySelector("#ball5").style.background = "none"
-});
-
-document.querySelector("#ball3").addEventListener("click", function(){
-    document.querySelector("#img1").style.display = "none"
-    document.querySelector("#img2").style.display = "none"
-    document.querySelector("#img3").style.display = "block"
-    document.querySelector("#img4").style.display = "none"
-    document.querySelector("#img5").style.display = "none"
-
-    document.querySelector("#ball").style.background = "none"
-    document.querySelector("#ball2").style.background = "none"
-    document.querySelector("#ball3").style.background = "#2C61AB"
-    document.querySelector("#ball4").style.background = "none"
-    document.querySelector("#ball5").style.background = "none"
-});
-
-document.querySelector("#ball4").addEventListener("click", function(){
-    document.querySelector("#img1").style.display = "none"
-    document.querySelector("#img2").style.display = "none"
-    document.querySelector("#img3").style.display = "none"
-    document.querySelector("#img4").style.display = "block"
-    document.querySelector("#img5").style.display = "none"
-
-    document.querySelector("#ball").style.background = "none"
-    document.querySelector("#ball2").style.background = "none"
-    document.querySelector("#ball3").style.background = "none"
-    document.querySelector("#ball4").style.background = "#2C61AB"
-    document.querySelector("#ball5").style.background = "none"
-});
-
-document.querySelector("#ball5").addEventListener("click", function(){
-    document.querySelector("#img1").style.display = "none"
-    document.querySelector("#img2").style.display = "none"
-    document.querySelector("#img3").style.display = "none"
-    document.querySelector("#img4").style.display = "none"
-    document.querySelector("#img5").style.display = "block"
-
-    document.querySelector("#ball").style.background = "none"
-    document.querySelector("#ball2").style.background = "none"
-    document.querySelector("#ball3").style.background = "none"
-    document.querySelector("#ball4").style.background = "none"
-    document.querySelector("#ball5").style.background = "#2C61AB"
-});
-
-
-
-document.querySelector("#stop2").addEventListener("click", function(){
-    document.querySelector("#stop").style.display = "block"
-    document.querySelector("#stop2").style.display = "none"
-});
 
 function gg1(){
     document.querySelector(".gg1").style.background = "rgb(0,114,188)";
@@ -175,43 +98,134 @@ function gg3(){
 }
 
 
+var one = document.querySelector("#stop");
+var two = document.querySelector("#stop2");
 
-window.onload = function() {
-    const kindWrap =  document.querySelector('.kind_wrap');
-    const slider = kindWrap.querySelector('.slider');
-    const slideLis = slider.querySelectorAll('li')
-    const moveButton = kindWrap.querySelector('.arrow');
+const kindWrap =  document.querySelector('.kind_wrap');
+const slider = kindWrap.querySelector('.slider');
+const slideLis = slider.querySelectorAll('li')
+const moveButton = kindWrap.querySelector('.arrow');
   
-    /* ul 넓이 계산해 주기 */
-    const liWidth = slideLis[0].clientWidth;
-    const sliderWidth = liWidth * slideLis.length;
-    slider.style.width = `${sliderWidth}px` ;
+/* ul 넓이 계산해 주기 */
+const liWidth = slideLis[0].clientWidth;
+const sliderWidth = liWidth * slideLis.length;
+slider.style.width = `${sliderWidth}px` ;
   
-    /* 리스너 설치하기 */
-    let currentIdx = 0; // 슬라이드 현재 번호
-    let translate = 0; // 슬라이드 위치 값
-    moveButton.addEventListener('click', moveSlide);
-    function moveSlide(event) {
-      event.preventDefault();
-      if (event.target.className === 'next') {
-        if (currentIdx !== slideLis.length -1) {
-          translate -= liWidth;
-          slider.style.transform = `translateX(${translate}px)`;
-          currentIdx += 1;
-        }
-      } 
-      else if (event.target.className === 'prev') {
-        if (currentIdx !== 0) {
-            translate += liWidth;
-            slider.style.transform = `translateX(${translate}px)`;
-            currentIdx -= 1;
-        }
-      }
-    }
-  
+/* 리스너 설치하기 */
+let currentIdx = 0; // 슬라이드 현재 번호
+let translate = 0; // 슬라이드 위치 값
+
+
+var ball1 = document.querySelector("#ball1");
+var ball2 = document.querySelector("#ball2");
+var ball3 = document.querySelector("#ball3");
+var ball4 = document.querySelector("#ball4");
+var ball5 = document.querySelector("#ball5");
+var k=1;
+
+function ballone(){
+    ball1.style.background = "#2C61AB";
+    ball2.style.background = "none";
+    ball3.style.background = "none";
+    ball4.style.background = "none";
+    ball5.style.background = "none";
+}
+function balltwo(){
+    ball1.style.background = "none";
+    ball2.style.background = "#2C61AB";
+    ball3.style.background = "none";
+    ball4.style.background = "none";
+    ball5.style.background = "none";
+}
+function ballthree(){
+    ball1.style.background = "none";
+    ball2.style.background = "none";
+    ball3.style.background = "#2C61AB";
+    ball4.style.background = "none";
+    ball5.style.background = "none";
+}
+function ballfour(){
+    ball1.style.background = "none";
+    ball2.style.background = "none";
+    ball3.style.background = "none";
+    ball4.style.background = "#2C61AB";
+    ball5.style.background = "none";
+}
+function ballfive(){
+    ball1.style.background ="none";
+    ball2.style.background = "none";
+    ball3.style.background = "none";
+    ball4.style.background = "none";
+    ball5.style.background =  "#2C61AB";
+}
+ball1.addEventListener("click", function(){
+    ballone();
+    currentIdx = 1;
+    translate = 0;
+    slider.style.transform = `translateX(${translate}px)`;
+});
+ball2.addEventListener("click", function(){
+    balltwo();
+    currentIdx = 2;
+    translate = -1500;
+    slider.style.transform = `translateX(${translate}px)`;
+});
+ball3.addEventListener("click", function(){
+    ballthree();
+    currentIdx = 3;
+    translate = -3000;
+    slider.style.transform = `translateX(${translate}px)`;
+});
+ball4.addEventListener("click", function(){
+    ballfour();
+    currentIdx = 4;
+    translate = -4500;
+    slider.style.transform = `translateX(${translate}px)`;
+});
+ball5.addEventListener("click", function(){
+    ballfive();
+    currentIdx = 5;
+    translate = -6000;
+    slider.style.transform = `translateX(${translate}px)`;
+});
+
+if(k){
+    k--;
+    ball1.style.background = "#2C61AB";
+    var start = setInterval(()=> {slides()}, 2000);
 }
 
-
+function slides(){
+    if(currentIdx == 5){
+        currentIdx = 0;
+        translate = -liWidth+liWidth;
+        slider.style.transform = `translateX(${translate}px)`;
+        slider.style.transition = "none";
+      }
+      else {
+          slider.style.transition = "0.5s";
+          translate -= liWidth;
+          slider.style.transform = `translateX(${translate}px)`;
+          currentIdx+=1;
+          if(currentIdx == 0 || currentIdx==5) ballone();
+          else if(currentIdx == 1) balltwo();
+          else if(currentIdx == 2) ballthree();
+          else if(currentIdx == 3) ballfour();
+          else if(currentIdx == 4) ballfive();
+          
+          
+      }
+      one.addEventListener("click", function(){
+          one.style.display = "none";
+          two.style.display = "block";
+          clearInterval(start);
+      });
+}
+two.addEventListener("click", function(){
+    one.style.display = "block";
+    two.style.display = "none";
+    start = setInterval(()=> {slides()}, 3000);
+});
 
 
 var number =7;
@@ -594,3 +608,38 @@ function minus(){
         }
     }
 }
+
+let count = 0;
+function view(){
+    if(count){
+        document.querySelector("#banner_list").style.height = "50px";
+        document.querySelector("footer").style.marginTop = "50px";
+        count--;
+    }
+    else{
+        count++;
+        document.querySelector("#banner_list").style.height = "400px";
+        document.querySelector("footer").style.marginTop = "400px";
+    }   
+}
+
+
+
+const banner = document.querySelector("#banner");
+const banners = banner_list.querySelectorAll("div");
+const banner_list = document.querySelector("#banner_list");
+const banner1 = document.getElementsByClassName("banner1");
+const divWidth = banners[0].clientWidth;
+const bannersWidth = divWidth * banners.length;
+
+
+document.getElementById("banner").style.transform = "translateX(500px)";
+let Index = 0;
+let place = 0;
+
+window.onload = setInterval(() => {
+    place = divWidth;
+    banner1.style.transform = `translateX(500px)`;
+    banners.style.transform = `translateX(500px)`;
+    Index+=1;
+}, 2000);
