@@ -1,3 +1,107 @@
+let offsetX, offsetY;
+let isDragging = false;
+const popup = document.getElementById("popup");
+const popup_bar = document.getElementById("popup_bar");
+popup_bar.addEventListener('mousedown', (e) => {
+    isDragging = true;
+    offsetX = e.clientX - popup.getBoundingClientRect().left;
+    offsetY = e.clientY - popup.getBoundingClientRect().top;
+});
+
+document.addEventListener('mousemove', (e) => {
+    if (isDragging) {
+        const minLeft = 0;
+        const minTop = 0;
+        const maxLeft = window.innerWidth - popup.offsetWidth;
+        const maxTop = window.innerHeight - popup.offsetHeight;
+        
+        // 새 위치를 계산
+        let newLeft = e.clientX - offsetX;
+        let newTop = e.clientY - offsetY;
+        
+        // 경계 체크
+        if (newLeft < minLeft) newLeft = minLeft;
+        if (newTop < minTop) newTop = minTop;
+        if (newLeft > maxLeft) newLeft = maxLeft;
+        if (newTop > maxTop) newTop = maxTop;
+        
+        // 위치 업데이트
+        popup.style.left = `${newLeft}px`;
+        popup.style.top = `${newTop}px`;
+        popup.style.transform = 'none'; // 초기 transform을 무효화
+    }
+});
+
+
+
+let offsetX2, offsetY2;
+let isDragging2 = false;
+const popup2 = document.getElementById("popup2");
+const popup_bar2 = document.getElementById("popup_bar2");
+popup_bar2.addEventListener('mousedown', (e) => {
+    isDragging2 = true;
+    offsetX2 = e.clientX - popup2.getBoundingClientRect().left;
+    offsetY2 = e.clientY - popup2.getBoundingClientRect().top;
+});
+
+document.addEventListener('mousemove', (e) => {
+    if (isDragging2) {
+        const minLeft2 = 0;
+        const minTop2 = 0;
+        const maxLeft2 = window.innerWidth - popup2.offsetWidth;
+        const maxTop2 = window.innerHeight - popup2.offsetHeight;
+        
+        // 새 위치를 계산
+        let newLeft2 = e.clientX - offsetX2;
+        let newTop2 = e.clientY - offsetY2;
+        
+        // 경계 체크
+        if (newLeft2 < minLeft2) newLeft2 = minLeft2;
+        if (newTop2 < minTop2) newTop2 = minTop2;
+        if (newLeft2 > maxLeft2) newLeft2 = maxLeft2;
+        if (newTop2 > maxTop2) newTop2 = maxTop2;
+        
+        // 위치 업데이트
+        popup2.style.left = `${newLeft2}px`;
+        popup2.style.top = `${newTop2}px`;
+        popup2.style.transform = 'none'; // 초기 transform을 무효화
+    }
+});
+
+
+
+document.addEventListener('mouseup', () => {
+    isDragging = false;
+});
+document.addEventListener('mouseup', () => {
+    isDragging2 = false;
+});
+
+function showPopup() {popup.style.display = 'block';}
+function showPopup2() {popup2.style.display = 'block';}
+
+function closePopup() {popup.style.display = 'none';}
+function close(){
+    popup.style.height = "0px";
+    popup.style.transition = "0.2s";
+    popup.style.overflow = "hidden";
+    setTimeout(closePopup, 300);
+  }
+function closePopup2() {popup2.style.display = 'none';}
+function close2(){
+    popup2.style.height = "0px";
+    popup2.style.transition = "0.2s";
+    popup2.style.overflow = "hidden";
+    setTimeout(closePopup2, 300);
+  }
+
+window.onload = function() {
+    setTimeout(showPopup, 1000);
+    setTimeout(showPopup2, 1000);
+};
+
+
+
 
 document.querySelector(".bar1").addEventListener("mouseover", function(){document.querySelector("#bar1").style.display = "block"});
 document.querySelector(".bar1").addEventListener("mouseleave", function(){document.querySelector("#bar1").style.display = "none"});
@@ -643,3 +747,6 @@ window.onload = setInterval(() => {
     banners.style.transform = `translateX(500px)`;
     Index+=1;
 }, 2000);
+
+
+

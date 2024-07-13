@@ -16,7 +16,7 @@ main{
     display: flex;
     flex-direction: row;
 }
-#gongsi{padding: 15px 5% 15px 5%; background: #127A22;}
+#gongsi{padding: 15px 60px 15px 50px; background: #127A22;}
 #gongsi a{text-decoration-line: none; color:rgb(255, 255, 255);
     font-family: Inter;
     font-size: 20px;
@@ -535,3 +535,112 @@ footer{
     right: 0px;
 }
 #num31{display: none;}
+#popup{
+    background-color: white;
+    z-index: 1;
+      width: 1000px;
+      height: 200px;
+      border: 0.9px solid rgb(128, 128, 128);
+      border-radius: 5px;
+      position: relative;
+      display: block;
+      right: 0%;
+      position: absolute;
+    }
+    #popup_bar{
+      background-color: #1550A0;
+      width: 990px;
+      height: 40px;
+      border-radius: 5px;
+      border: 1px solid black;
+      margin: 0px auto;
+      margin-top: 5px;
+      display: flex;
+      align-items: center;
+      position: relative;
+      cursor: move;
+      z-index: 1;
+    }
+    #popup_bar p{
+      position: absolute;
+      top: -5px;
+      left: 10px;
+      font-size: 16px;
+      font-weight: 700;
+      color: white;
+      z-index: 1;
+    }
+    #popup_bar button{
+      position: absolute;
+      top: 8px;
+      right: 10px;
+      cursor: pointer;
+      z-index: 1;
+    }
+    .nopopup{
+      width: 990px;
+      position: absolute;
+      z-index: 1;
+      background-color: #3B568F;
+      height: 25px;
+      color: white;
+      display: flex;
+      align-items: center;
+      margin: 0px auto;
+      justify-content: end;
+      cursor: pointer;
+    }
+    .popup_img{
+      margin-top: 5px;
+      display: flex;
+      justify-content: center;
+      z-index: 1;
+    }
+
+
+    #popup2{
+        width: 400px;
+        background-color: rgb(255, 255, 255);
+        height: 470px;
+        border: 0.9px solid rgb(128, 128, 128);
+        border-radius: 5px;
+        z-index: 1;
+        position: absolute;
+        top: 20%;
+      }
+      #popup_bar2{
+        width: 370px;
+        background-color: #1550A0;
+        border-radius: 5px;
+        z-index: 1;
+        position: relative;
+        height: 40px;
+        padding: 5px 10px;
+        margin: 0px auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 5px;
+        cursor: move;
+      }
+      #popup_bar2 p{
+        font-size: 16px;
+        font-weight: 700;
+        color: white;
+        z-index: 1;
+      }
+      .popup_li{
+        line-height: 40px;
+        background-color: rgb(231, 231, 231);
+        width: 350px;
+        margin: 0px auto;
+        overflow: scroll;
+        height: 350px;
+        border-radius: 5px;
+        margin-top: 5px;
+      }
+      .popup_li li a{
+        color: rgb(82, 82, 82);
+        font-size: 14px;
+        text-decoration-line: none;
+      }
