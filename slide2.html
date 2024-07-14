@@ -5,109 +5,148 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <style>
-    .popup{
-      width: 1000px;
-      height: 200px;
-      border: 0.9px solid rgb(128, 128, 128);
-      border-radius: 5px;
-      position: relative;
-    }
-    .popup_bar{
-      background-color: #1550A0;
-      width: 990px;
-      height: 40px;
-      border-radius: 5px;
-      border: 1px solid black;
-      margin: 0px auto;
-      margin-top: 5px;
-      display: flex;
-      align-items: center;
-      position: relative;
-      cursor: move;
-    }
-    .popup_bar p{
-      position: absolute;
-      top: -5px;
-      left: 10px;
-      font-size: 16px;
-      font-weight: 700;
-      color: white;
-    }
-    .popup_bar button{
-      position: absolute;
-      top: 8px;
-      right: 10px;
-      cursor: pointer;
-    }
-    .nopopup{
-      width: 990px;
-      position: absolute;
-      z-index: 1;
-      background-color: #3B568F;
-      height: 25px;
-      color: white;
-      display: flex;
-      align-items: center;
-      margin: 0px auto;
-      justify-content: end;
-      cursor: pointer;
-    }
-    .popup_img{
-      margin-top: 5px;
-      display: flex;
-      justify-content: center;
-    }
+.banner{
+    position: relative;
+}
+#banner_list{
+    width: 800px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    height: 50px;
+    box-sizing: border-box;
+}
+#banners{
+    margin-top: 5px;
+    width: 140px;
+}
+footer{
+    margin-left: 100px;
+    margin-right: 100px;
+    width: 87%;
+    position: absolute;
+    top: 1550px;
+    height: 180px;
+}
   </style>
 </head>
 <body>
-  <section class="popup">
-    <div class="popup_bar">
-      <p>2025년도 현장실습 확정 현수막</p>
-      <button style="width: 25px;"><img src="canc.png"style="width: 10px;"></button>
-    </div>
-    <div class="popup_img">
-      <img src="popup_img.jpg" width="990px">
-    </div>
-    <div class="nopopup" style="margin-left: 5px;">
-      <p style="margin-right: 20px;">하루동안 열지 않음[클릭]</p>
-    </div>
     
-    </article>
-  </section>
+    <section id="banner" class="banner">
+
+        <article style="margin-left: 7%;" class="person">배너모음</article>
+        <article style="width: 150px;margin-left: 2%;">
+            <input type="button" value="<">
+            <input type="button" value="||">
+            <input type="button" value=">">
+            <input type="button" value="목록" onclick="view()">
+        </article>
+        <article id="banner_list">
+            <div id="banners" class="banner1">
+                <img src="배너2.png" width="100%" style="border: 1px solid black;">
+            </div>
+            <div id="banners">
+                <img src="배너3.png" width="100%" style="border: 1px solid black;">
+            </div>
+            <div id="banners">
+                <img src="배너4.png" width="100%" style="border: 1px solid black;">
+            </div>
+            <div id="banners">
+                <img src="배너5.png" width="100%" style="border: 1px solid black;">
+            </div>
+            <div id="banners">
+                <img src="배너6.png" width="100%" style="border: 1px solid black;">
+            </div>
+            <div id="banners">
+                <img src="배너7.png" width="100%" style="border: 1px solid black;">
+            </div>
+            <div id="banners">
+                <img src="배너8.png" width="100%" style="border: 1px solid black;">
+            </div>
+            <div id="banners">
+                <img src="배너9.png" width="100%" style="border: 1px solid black;">
+            </div>
+            <div id="banners">
+                <img src="배너10.png" width="100%" style="border: 1px solid black;">
+            </div>
+            <div id="banners">
+                <img src="배너11.png" width="100%" style="border: 1px solid black;">
+            </div>
+            <div id="banners">
+                <img src="배너12.png" width="100%" style="border: 1px solid black;">
+            </div>
+            <div id="banners">
+                <img src="배너13.png" width="100%" style="border: 1px solid black;">
+            </div>
+            <div id="banners">
+                <img src="배너14.png" width="100%" style="border: 1px solid black;">
+            </div>
+            <div id="banners">
+                <img src="배너15.png" width="100%" style="border: 1px solid black;">
+            </div>
+            <div id="banners">
+                <img src="배너16.png" width="100%" style="border: 1px solid black;">
+            </div>
+            <div id="banners">
+                <img src="배너17.png" width="100%" style="border: 1px solid black;">
+            </div>
+            <div id="banners">
+                <img src="배너18.png" width="100%" style="border: 1px solid black;">
+            </div>
+            <div id="banners">
+                <img src="배너19.png" width="100%" style="border: 1px solid black;">
+            </div>
+            <div id="banners">
+                <img src="배너20.png" width="100%" style="border: 1px solid black;">
+            </div>
+            <div id="banners">
+                <img src="배너21.png" width="100%" style="border: 1px solid black;">
+            </div>
+            <div id="banners">
+                <img src="배너22.png" width="100%" style="border: 1px solid black;">
+            </div>
+            <div id="banners">
+                <img src="배너23.png" width="100%" style="border: 1px solid black;">
+            </div>
+            <div id="banners">
+                <img src="배너24.png" width="100%" style="border: 1px solid black;">
+            </div>
+            <div id="banners">
+                <img src="배너25.png" width="100%" style="border: 1px solid black;">
+            </div>
+            <div id="banners">
+                <img src="배너26.png" width="100%" style="border: 1px solid black;">
+            </div>
+            <div id="banners">
+                <img src="배너27.png" width="100%" style="border: 1px solid black;">
+            </div>
+            <div id="banners">
+                <img src="배너28.png" width="100%" style="border: 1px solid black;">
+            </div>
+            <div id="banners">
+                <img src="배너29.png" width="100%" style="border: 1px solid black;">
+            </div>
+            <div id="banners">
+                <img src="배너30.png" width="100%" style="border: 1px solid black;">
+            </div>
+            <div id="banners">
+                <img src="" width="100%" style="border: 1px solid black;">
+            </div>
+        </article>
+        
+    </section>
+</body>
   <script>
-    let offsetX, offsetY;
-  let isDragging = false;
-  const popup = document.getElementsByClassName('popup');
+    const banner_list = document.getElementById('banner_list');
 
-  popup.addEventListener('mousedown', (e) => {
-      isDragging = true;
-      offsetX = e.clientX - popup.getBoundingClientRect().left;
-      offsetY = e.clientY - popup.getBoundingClientRect().top;
-  });
+function moveBoxes() {
+    const boxes = banner_list.children;
+    const lastBox = boxes[boxes.length - 1];
+    banner_list.insertBefore(lastBox.cloneNode(true), boxes[0]);
+    banner_list.removeChild(lastBox);
+}
 
-  document.addEventListener('mousemove', (e) => {
-      if (isDragging) {
-          popup.style.left = `${e.clientX - offsetX}px`;
-          popup.style.top = `${e.clientY - offsetY}px`;
-          popup.style.transform = 'none'; // 초기 transform을 무효화
-      }
-  });
-
-  document.addEventListener('mouseup', () => {
-      isDragging = false;
-  });
-
-  function showPopup() {
-      popup.style.display = 'block';
-  }
-
-  function closePopup() {
-      popup.style.display = 'none';
-  }
-
-  window.onload = function() {
-      setTimeout(showPopup, 1000);
-  };
+setInterval(moveBoxes, 2000);
   </script>
 </body>
 </html>
