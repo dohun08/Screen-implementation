@@ -6,9 +6,12 @@ popup_bar.addEventListener('mousedown', (e) => {
     isDragging = true;
     offsetX = e.clientX - popup.getBoundingClientRect().left;
     offsetY = e.clientY - popup.getBoundingClientRect().top;
+    popup.style.zIndex = "5";
+        popup2.style.zIndex = "4";
 });
 
 document.addEventListener('mousemove', (e) => {
+    popup.style.transition = "0s";
     if (isDragging) {
         const minLeft = 0;
         const minTop = 0;
@@ -29,6 +32,8 @@ document.addEventListener('mousemove', (e) => {
         popup.style.left = `${newLeft}px`;
         popup.style.top = `${newTop}px`;
         popup.style.transform = 'none'; // 초기 transform을 무효화
+
+        
     }
 });
 
@@ -42,9 +47,12 @@ popup_bar2.addEventListener('mousedown', (e) => {
     isDragging2 = true;
     offsetX2 = e.clientX - popup2.getBoundingClientRect().left;
     offsetY2 = e.clientY - popup2.getBoundingClientRect().top;
+    popup.style.zIndex = "4";
+        popup2.style.zIndex = "5";
 });
 
 document.addEventListener('mousemove', (e) => {
+    popup2.style.transition = "0s";
     if (isDragging2) {
         const minLeft2 = 0;
         const minTop2 = 0;
@@ -65,6 +73,8 @@ document.addEventListener('mousemove', (e) => {
         popup2.style.left = `${newLeft2}px`;
         popup2.style.top = `${newTop2}px`;
         popup2.style.transform = 'none'; // 초기 transform을 무효화
+
+        
     }
 });
 
@@ -77,16 +87,23 @@ document.addEventListener('mouseup', () => {
     isDragging2 = false;
 });
 
-function showPopup() {popup.style.display = 'block';}
-function showPopup2() {popup2.style.display = 'block';}
-
-function closePopup() {popup.style.display = 'none';}
+function show(){
+    popup.style.height = "200px";
+    popup.style.transition = "0.2s"; 
+}
+function show2(){
+    popup2.style.height = "470px";
+    popup2.style.transition = "0.2s"; 
+}
 function close(){
+    popup.style.display = "none";
+}
+function closePopup() {
     popup.style.height = "0px";
     popup.style.transition = "0.2s";
     popup.style.overflow = "hidden";
-    setTimeout(closePopup, 300);
-  }
+    setTimeout(close, 300);
+}
 function closePopup2() {popup2.style.display = 'none';}
 function close2(){
     popup2.style.height = "0px";
@@ -96,8 +113,8 @@ function close2(){
   }
 
 window.onload = function() {
-    setTimeout(showPopup, 1000);
-    setTimeout(showPopup2, 1000);
+    setTimeout(show, 100);
+    setTimeout(show2, 100);
 };
 
 
@@ -713,40 +730,52 @@ function minus(){
     }
 }
 
-let count = 0;
-function view(){
-    if(count){
-        document.querySelector("#banner_list").style.height = "50px";
-        document.querySelector("footer").style.marginTop = "50px";
-        count--;
-    }
-    else{
-        count++;
-        document.querySelector("#banner_list").style.height = "400px";
-        document.querySelector("footer").style.marginTop = "400px";
-    }   
+var m=1;
+if(m){
+    var start2 = setInterval(() => {moveBoxes()}, 3000);
+    m--;
 }
 
+const banner_list = document.getElementById('banner_list');
 
+function moveBoxes() {
+    const boxes = banner_list.children;
+    const lastBox = boxes[boxes.length - 2];
+    banner_list.insertBefore(lastBox.cloneNode(true), boxes[0]);
+    banner_list.removeChild(lastBox);
 
-const banner = document.querySelector("#banner");
-const banners = banner_list.querySelectorAll("div");
-const banner_list = document.querySelector("#banner_list");
-const banner1 = document.getElementsByClassName("banner1");
-const divWidth = banners[0].clientWidth;
-const bannersWidth = divWidth * banners.length;
+    
+}
+function stopmove(){
+    document.getElementById("stopbanner").style.display = "block";
+    document.getElementById("stopb").style.display = "none";
+    clearInterval(start2);
+}
 
+function startban(){
+    document.getElementById("stopbanner").style.display = "none";
+    document.getElementById("stopb").style.display = "block";
+    start2 = setInterval(() => {moveBoxes()}, 3000);
+}
+var v1 = document.getElementById("view1");
+var v2 = document.getElementById("view2");
+function view(){
+    banner_list.style.height = "400px";
+    document.getElementById("footer").style.marginTop = "400px";
+    v1.style.display = "none";
+    v2.style.display = "block";
+}
+function view2(){
+    banner_list.style.height = "50px";
+    document.getElementById("footer").style.marginTop = "50px";
+    v1.style.display = "block";
+    v2.style.display = "none";
+}
 
-document.getElementById("banner").style.transform = "translateX(500px)";
-let Index = 0;
-let place = 0;
-
-window.onload = setInterval(() => {
-    place = divWidth;
-    banner1.style.transform = `translateX(500px)`;
-    banners.style.transform = `translateX(500px)`;
-    Index+=1;
-}, 2000);
-
-
-
+function backBoxes(){
+    const boxs = banner_list.children;
+    const firstBox = boxs[0];
+    banner_list.insertBefore(firstBox.cloneNode(true), boxs[boxs.length - 1]);
+    banner_list.removeChild(firstBox);
+    
+}

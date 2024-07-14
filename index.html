@@ -4,19 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet"  href="style.css">
+    <link rel="stylesheet" media="screen and (max-width:700px)" href="style2.css">
+
+    
 </head>
 <body id="container">
     <section id="popup">
         <div id="popup_bar">
           <p>2025년도 현장실습 확정 현수막</p>
-          <button style="width: 25px;"><img src="canc.png"style="width: 10px;" onclick="close()"></button>
+          <button style="width: 25px;" onclick="closePopup()"><img src="canc.png"style="width: 10px;" ></button>
         </div>
         <div class="popup_img">
           <img src="popup_img.jpg" width="990px">
         </div>
         <div class="nopopup" style="margin-left: 5px;">
-          <p style="margin-right: 20px;" onclick="close()">하루동안 열지 않음[클릭]</p>
+          <p style="margin-right: 20px;" onclick="closePopup()">하루동안 열지 않음[클릭]</p>
         </div>
         
         </article>
@@ -25,27 +28,27 @@
       <section id="popup2">
         <article id="popup_bar2">
           <p>부산소프트웨어마이스터고등학교 팝업 목록</p>
-          <button style="width: 25px;"><img src="canc.png"style="width: 10px;" onclick="close2()"></button>
+          <button style="width: 25px; cursor: pointer;"onclick="close2()"><img src="canc.png"style="width: 10px;" ></button>
         </article>
         <ul class="popup_li">
-          <li><a href=""><span style="color: blue;">[ 학교 ]</span> 2025학년도 현장실습 확정 현수막</a></li>
-          <li><a href=""><span style="color: red;">[ 공통 ]</span> 2025학년도 대학수학능력시험 시행 ...</a></li>
-          <li><a href=""><span style="color: red;">[ 공통 ]</span> 2025학년도 대학수학능력시험 응시원...</a></li>
-          <li><a href=""><span style="color: red;">[ 공통 ]</span> 청소년 동백패스 이용 관련 안내</a></li>
-          <li><a href=""><span style="color: red;">[ 공통 ] </span>2024「책에 몰입하는 20분 영상 ...</a></li>
-          <li><a href=""><span style="color: red;">[ 공통 ] </span>2024년 제24회 부산시민 독후감 ...</a></li>
-          <li><a href=""><span style="color: red;">[ 공통 ] </span>2024년 디지털 성폭력 예방 아이디...</a></li>
-          <li><a href=""><span style="color: red;">[ 공통 ] </span>2024년 청렴콘텐츠 공모전</a></li>
-          <li><a href=""><span style="color: red;">[ 공통 ] </span>2025학년도 대학수학능력시험 9월 ...</a></li>
-          <li><a href=""><span style="color: red;">[ 공통 ] </span>[미리 알리도] 제증명 일반 Shor...</a></li>
-          <li><a href=""><span style="color: red;">[ 공통 ] </span>부산교육역사관 여름방학 및 하반기 교...</a></li>
-          <li><a href=""><span style="color: red;">[ 공통 ] </span>물놀이 안전수칙</a></li>
-          <li><a href=""><span style="color: red;">[ 공통 ] </span>『교육공동체 회복 대토론회』주제별 토...</a></li>
-          <li><a href=""><span style="color: red;">[ 공통 ] </span>다자녀가정 교육지원포인트 신청 안내</a></li>
-          <li><a href=""><span style="color: red;">[ 공통 ] </span>2025학년도 부산광역시 고등학교 입...</a></li>
-          <li><a href=""><span style="color: red;">[ 공통 ] </span>독서체인지「책몰이Song」(책에 몰입...</a></li>
-          <li><a href=""><span style="color: red;">[ 공통 ] </span>다자녀가정 교육지원포인트 지원 관련 ...</a></li>
-          <li><a href=""><span style="color: red;">[ 공통 ] </span>2025학년도 부산광역시 고등학교 입...</a></li>
+          <li><span style="color: blue;">[ 학교 ]</span> 2025학년도 현장실습 확정 현수막</a></li>
+          <li><span style="color: red;">[ 공통 ]</span> 2025학년도 대학수학능력시험 시행 ...</a></li>
+          <li><span style="color: red;">[ 공통 ]</span> 2025학년도 대학수학능력시험 응시원...</a></li>
+          <li><span style="color: red;">[ 공통 ]</span> 청소년 동백패스 이용 관련 안내</a></li>
+          <li><span style="color: red;">[ 공통 ] </span>2024「책에 몰입하는 20분 영상 ...</a></li>
+          <li><span style="color: red;">[ 공통 ] </span>2024년 제24회 부산시민 독후감 ...</a></li>
+          <li><span style="color: red;">[ 공통 ] </span>2024년 디지털 성폭력 예방 아이디...</a></li>
+          <li><span style="color: red;">[ 공통 ] </span>2024년 청렴콘텐츠 공모전</a></li>
+          <li><span style="color: red;">[ 공통 ] </span>2025학년도 대학수학능력시험 9월 ...</a></li>
+          <li><span style="color: red;">[ 공통 ] </span>[미리 알리도] 제증명 일반 Shor...</a></li>
+          <li><span style="color: red;">[ 공통 ] </span>부산교육역사관 여름방학 및 하반기 교...</a></li>
+          <li><span style="color: red;">[ 공통 ] </span>물놀이 안전수칙</a></li>
+          <li><span style="color: red;">[ 공통 ] </span>『교육공동체 회복 대토론회』주제별 토...</a></li>
+          <li><span style="color: red;">[ 공통 ] </span>다자녀가정 교육지원포인트 신청 안내</a></li>
+          <li><span style="color: red;">[ 공통 ] </span>2025학년도 부산광역시 고등학교 입...</a></li>
+          <li><span style="color: red;">[ 공통 ] </span>독서체인지「책몰이Song」(책에 몰입...</a></li>
+          <li><span style="color: red;">[ 공통 ] </span>다자녀가정 교육지원포인트 지원 관련 ...</a></li>
+          <li><span style="color: red;">[ 공통 ] </span>2025학년도 부산광역시 고등학교 입...</a></li>
         </ul>
         <article style="margin: 0px auto;  width: 90px;">
           <img src="popup_img2.png" width="80px">
@@ -341,11 +344,13 @@
         <section id="banner" class="banner">
 
             <article style="margin-left: 7%;" class="person">배너모음</article>
-            <article style="width: 150px;margin-left: 2%;">
-                <input type="button" value="<">
-                <input type="button" value="||">
-                <input type="button" value=">">
-                <input type="button" value="목록" onclick="view()">
+            <article style="width: 170px; margin-left: 2%; display: flex;">
+                <input type="button" value="<" onclick="backBoxes()">
+                <input type="button" value="||" onclick="stopmove()" id="stopb">
+                <button id="stopbanner" onclick="startban()"><img src="stop.png"></button>
+                <input type="button" value=">"onclick="moveBoxes()">
+                <input type="button" value="목록" onclick="view()" id="view1">
+                <input type="button" value="목록" onclick="view2()" id="view2" style="display: none;">
             </article>
             <article id="banner_list">
                 <div id="banners" class="banner1">
@@ -442,7 +447,7 @@
             
         </section>
     </main>
-    <footer style="margin-top: 50px;">
+    <footer id="footer">
         <article class="warning">
             <p><a href="https://school.busanedu.net/bssm-h/iv/indvdlView/selectIndvdlView.do" class="person" style="color: #4863FD;">개인정보처리방침</a></p>
             <p><a href="https://school.busanedu.net/bssm-h/common/openInfoCprEm.do" class="person">이메일주소무단수집거부</a></p>
